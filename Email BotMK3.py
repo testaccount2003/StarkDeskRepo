@@ -2,13 +2,15 @@ import smtplib
 while True:
     try:
         mailAddress = input("Enter recipient's mail address: " )
+        print(" Please turn on /"Less Secure Apps/" in "/Security/" Tab in your "/Google Account/"") 
         text = input("Enter message to be sent: ")
-
+        email = input(" Enter Your Email: ") 
+        pass = input(" Enter your Password: ") 
 
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls()
-        server.login('dehimangshu03@gmail.com', 'password#$34')
-        server.sendmail('dehimangshu03@gmail.com', mailAddress, text)
+        server.login(email, pass)
+        server.sendmail(email, mailAddress, text)
         print("Voila! Your mail was sent successfully...")
         print()
         print('Would you like to send another mail?')
